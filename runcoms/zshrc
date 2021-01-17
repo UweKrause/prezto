@@ -10,4 +10,32 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+
+# Customized:
+#   uwe
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+
+alias ls="ls -al --color"
+
+# colorized (highlighted) files
+alias ccat="highlight --line-numbers --out-format=ansi --failsafe"
+
+# network/dsn quick troubleshooting
+alias pg="ping google.de"
+alias p8="ping 8.8.8.8"
+
+# lxd: less details for smaller terminals
+alias lls="lxc ls -c ns,config:image.os,4"
+
+# downloads gitignore templates
+function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
+
+# lazy git add, commit, push. # don't do something like this...
+function gacp() {
+    git add .
+    #git commit -a -m "$1"
+    git commit -a -m "lazygit"
+    git push
+}
