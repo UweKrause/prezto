@@ -10,9 +10,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-
 # Customized:
 #   uwe
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/custom_completion/_lxc" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/custom_completion/_lxc"
+fi
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/custom_completion/_lxd" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/custom_completion/_lxd"
+fi
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
