@@ -12,3 +12,5 @@ fi
 
 # Enables executables in $HOME/bin
 PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/.local/bin
+

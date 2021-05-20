@@ -3,7 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+#   (modified by) Uwe Krause 
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -26,6 +26,8 @@ source /usr/bin/virtualenvwrapper.sh
 
 alias ls="ls -al --color"
 
+alias exa="exa --long --all --git"
+
 # colorized (highlighted) files
 alias ccat="highlight --line-numbers --out-format=ansi --failsafe"
 
@@ -46,3 +48,5 @@ function gacp() {
     git commit -a -m "lazygit"
     git push
 }
+
+source /usr/share/nvm/init-nvm.sh
